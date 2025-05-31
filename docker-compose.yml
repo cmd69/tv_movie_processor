@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  webapp:
+    build: .
+    container_name: tv_movie_processor
+    ports:
+      - "5000:5000"
+    volumes:
+      - /home/user/docker/tv_movie_processor/src:/src
+      - /mnt/nfs/media_path:/mnt/nfs/media
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Ensure the container has enough resources
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
