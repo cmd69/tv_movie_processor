@@ -12,6 +12,22 @@ services:
     restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
+      # Authentication credentials
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=password
+      - MEDIA_ROOT=/mnt/nfs/media
+      # Database configuration (sqlite by default)
+      - DB_TYPE=sqlite
+      # Uncomment and modify these for MySQL/PostgreSQL
+      # - DB_TYPE=mysql+pymysql
+      # - DB_USERNAME=root
+      # - DB_PASSWORD=password
+      # - DB_HOST=db
+      # - DB_PORT=3306
+      # - DB_NAME=tv_movie_processor
+      # Application settings
+      - SECRET_KEY=YourSecretKey
+      - DEBUG=false
     # Ensure the container has enough resources
     deploy:
       resources:

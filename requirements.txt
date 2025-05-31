@@ -19,6 +19,11 @@ distro==1.7.0
 et_xmlfile==2.0.0
 fastapi==0.115.12
 Flask==3.1.1
+flask-login==0.6.3
+flask-sqlalchemy==3.1.1
+flask-migrate==4.1.0
+alembic==1.16.1
+Mako==1.3.10
 fonttools==4.58.0
 fpdf==1.7.2
 fpdf2==2.8.3
@@ -63,6 +68,7 @@ seaborn==0.13.2
 six==1.17.0
 sniffio==1.3.1
 soupsieve==2.7
+sqlalchemy==2.0.41
 ssh-import-id==5.11
 starlette==0.46.2
 supervisor==4.2.1
